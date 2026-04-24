@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GlowUp Store</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>GlowUp Store</h1>
+<button onclick="cadastro.classList.remove('oculto')">
+Adicionar Cosmético
+</button>
+</header>
+
+<main id="listaCosmeticos"></main>
+
+<div id="cadastro" class="modal oculto">
+<div class="janela">
+
+<h2>Adicionar Cosmético</h2>
+
+<form id="formCosmetico">
+
+<label>Nome do Cosmético</label>
+<input type="text" id="nome" required>
+
+<label>Categoria</label>
+<input type="text" id="categoria">
+
+<label>Marca</label>
+<input type="text" id="marca">
+
+<label>Preço</label>
+<input type="number" id="preco" required>
+
+<label>URL da imagem</label>
+<input type="text" id="urlImagem">
+
+<br><br>
+
+<button type="reset" onclick="cadastro.classList.add('oculto')">Cancelar</button>
+<button type="submit">Salvar</button>
+
+</form>
+</div>
+</div>
+
+<div id="detalhes" class="modal oculto">
+<div class="janela">
+
+<h2 id="tituloCosmetico"></h2>
+<img id="imgCosmetico">
+<p><b>Nome</b></p>
+<input type="text" id="nomeEdit">
+<p><b>Imagem (URL)</b></p>
+<input type="text" id="imgEdit">
+<p><b>Categoria</b></p>
+<input type="text" id="categoriaEdit">
+<p><b>Marca</b></p>
+<input type="text" id="marcaEdit">
+<p><b>Preço</b></p>
+<input type="number" id="precoEdit">
+
+<br><br>
+
+<button onclick="salvarEdicao()">Salvar</button>
+<button onclick="excluirCosmetico()">Excluir</button>
+<button onclick="detalhes.classList.add('oculto')">
+Fechar
+</button>
+</div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
